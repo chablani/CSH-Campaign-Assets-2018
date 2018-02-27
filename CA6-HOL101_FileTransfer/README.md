@@ -1,54 +1,56 @@
 <center>
 <img src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" />
-</center>
+</center> 
 
-Step-by-step Instructions
+#Step-by-step Instructions
 
 # Workshop Overview
 
 **To View in Interactive Labguide Format:**  
 
-[GitHub IO Pages](https://zhamburglar.github.io/ICSHCMWorkshop/)
+[GitHub IO Pages](https://rebrand.ly/ttcicslab)
 
-# ICS-HCM Integration Deep Dive
+# Labs
 
 **Reference the following Lab Guides by opening their Documentation Files:**
 ## Required pre-work
 
-**Documentation**: [Pre-Work](ics000.md)
+**Documentation**: icsftp000.md
 
-## Lab 100: Exploring ICS
+## Lab 100: Getting Started
 
-**Documenation**: [Lab Guide 100](LabGuide100.md)
+**Documenation**: icsftp_lab100.md
 
 ### Objectives
 The objective of this lab is to expose you to:
 
 - **Getting familiar with ICS concepts**
 
-## Lab 200: Verifying Connections
+## Lab 200: Mappings
 
-**Documenation**: [Lab Guide 200](LabGuide200.md)
+**Documenation**: icsftp_lab200.md
 
 ### Objectives
 The objective of this lab is to expose you to:
 
-- **Build your first connections in ICS**
+- **Build your first 'hello world' integration**
 
 
-## Lab 300: ICS Development
+## Lab 300: Adapters
 
-**Documenation**: [Lab Guide 300](LabGuide300.md)
+**Documenation**: icsftp_lab300.md
 
 ### Objectives
 The objective of this lab is to expose you to the:
 
-- **Developing Integration into backend systems using adapters**
+- **Integration into backend systems**
 
-## Lab 400: HCM Integration
+- **Database adapter**
 
-**Documentation**: [Lab Guide 400](LabGuide400.md)
+## Lab 400: Orchestration
+
+**Documentation**: icsftp_lab400.md
 
 ### Objectives
 
-- **Explore Integration Cloud Service by taking the external data and format it to HCM Cloud service**
+- **Use the previous labs experiences to build a integration into Oracle's eBusiness Suite**
