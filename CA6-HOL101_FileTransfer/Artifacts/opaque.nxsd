@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+        xmlns:tns="http://testnxsd.oracle.com/fileInputService"
+        targetNamespace="http://testnxsd.oracle.com/testopaque"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified"
+        nxsd:stream="BYTES"
+        nxsd:version="OPAQUE"
+        nxsd:encoding="UTF-8"
+        nxsd:encodeLineTerminators="false"
+>
+<element name="opaqueData" type="base64Binary" />
+</schema>

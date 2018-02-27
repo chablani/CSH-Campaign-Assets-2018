@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+     name="TalentProfileProcess"
+     targetNamespace="http://xmlns.oracle.com/OrderApp/TalentProfileProject/TalentProfileProcess"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/OrderApp/TalentProfileProject/TalentProfileProcess"
+     xmlns:ns1="http://icshcmpoc.oracle.com/TalentProfileData"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://icshcmpoc.oracle.com/TalentProfileData">
+            <element name="TalentProfileData">
+                <complexType>
+                    <sequence>
+                        <element name="TalentProfile" minOccurs="1" maxOccurs="1">
+                            <complexType>
+                                <sequence>
+                                    <element name="PersonNumber" type="int"/>
+                                    <element name="ProfileTypeCode" type="string"/>
+                                    <element name="ProfileCode" type="string"/>
+                                    <element name="ProfileStatusCode" type="string"/>
+                                    <element name="ProfileUsageCode" type="string"/>
+                                </sequence>
+                            </complexType>
+                        </element>
+                        <element name="ProfileItem" maxOccurs="unbounded">
+                            <complexType>
+                                <sequence>
+                                    <element name="SourceSystemOwner" type="string"/>
+                                    <element name="SourceSystemId" type="string"/>
+                                    <element name="ProfileCode" type="string"/>
+                                    <element name="ContentType" type="string"/>
+                                    <element name="ContentItem" type="string"/>
+                                    <element name="DateFrom" type="string"/>
+                                    <element name="ItemText24010" type="string"/>
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified"
+             targetNamespace="http://xmlns.oracle.com/OrderApp/TalentProfileProject/TalentProfileProcess">
+            <element name="processResponse">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="TalentProfileProcessRequestMessage">
+        <wsdl:part name="payload" element="ns1:TalentProfileData"/>
+    </wsdl:message>
+    <wsdl:message name="TalentProfileProcessResponseMessage">
+        <wsdl:part name="payload" element="client:processResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="TalentProfileProcess">
+        <wsdl:operation name="addTalentProfileData">
+            <wsdl:input message="client:TalentProfileProcessRequestMessage"/>
+            <wsdl:output message="client:TalentProfileProcessResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="TalentProfileProcessBinding" type="client:TalentProfileProcess">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="addTalentProfileData">
+            <soap:operation style="document" soapAction="addTalentProfileData"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

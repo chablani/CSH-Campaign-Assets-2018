@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+        xmlns:tns="http://ichhcmpoc.oracle.com/TalentProfileFileData"
+        targetNamespace="http://ichhcmpoc.oracle.com/TalentProfileFileData"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified"
+
+        nxsd:stream="chars"
+        nxsd:version="NXSD"
+        nxsd:encoding="US-ASCII"
+        nxsd:encodeLineTerminators="false"
+>
+
+   <element name="TalentProfileFileData">
+     <complexType>
+       <choice maxOccurs="unbounded" minOccurs="0">
+         <element ref="tns:TalentProfileLabel" minOccurs="0" nxsd:startsWith="METADATA|TalentProfile|" />
+         <element ref="tns:TalentProfile" minOccurs="0" nxsd:startsWith="MERGE|TalentProfile|" />
+         <element ref="tns:ProfileItemLabel" minOccurs="0" nxsd:startsWith="METADATA|ProfileItem|" />
+         <element ref="tns:ProfileItem" minOccurs="0" nxsd:startsWith="MERGE|ProfileItem|" />
+      </choice>
+     </complexType>
+   </element>
+
+   <!-- TalentProfileLabel -->
+   <element name="TalentProfileLabel">
+      <complexType>
+         <sequence>
+            <element name="ProfileStatusCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileTypeCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="PersonNumberLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileUsageCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+         </sequence>
+      </complexType>
+   </element>
+
+   <!-- TalentProfile -->
+   <element name="TalentProfile">
+      <complexType>
+         <sequence>
+            <element name="ProfileStatusCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileTypeCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="PersonNumber" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileUsageCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+         </sequence>
+      </complexType>
+   </element>
+
+   <!-- ProfileItemLabel -->
+   <element name="ProfileItemLabel">
+      <complexType>
+         <sequence>
+            <element name="SourceSystemOwnerLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="SourceSystemIdLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileCodeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ContentTypeLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ContentItemLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="DateFromLabel" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ItemText24010Label" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+         </sequence>
+      </complexType>
+   </element>
+
+   <!-- ProfileItem -->
+   <element name="ProfileItem">
+      <complexType>
+         <sequence>
+            <element name="SourceSystemOwner" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="SourceSystemId" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ProfileCode" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ContentType" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ContentItem" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="DateFrom" type="string" nxsd:style="terminated" nxsd:terminatedBy="|" />
+            <element name="ItemText24010" type="string" nxsd:style="terminated" nxsd:terminatedBy="${eol}" />
+         </sequence>
+      </complexType>
+   </element>
+</schema>
