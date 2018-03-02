@@ -28,6 +28,14 @@ Let’s start by logging into the Oracle Cloud account and explore the Services 
 
 # 1: How To Activate
 
+*1. In the navigation pane, click Integrations.
+
+*2. In the row for the File Transfer sample, click the Activate icon, then click Activate when prompted.
+Description of sample_activate.png follows
+
+*3. Wait for the icon to turn green, indicating that it is activated.
+
+
 ### **1.1.1**: Login to your Oracle Cloud account
 
 ---
