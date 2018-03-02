@@ -17,7 +17,6 @@ This lab is part of the **Campaign Assets** initiative.
 
 In this lab, we will demonstrate how to read an opaque file from a source directory and write the file to an target directory in a scheduled orchestrated integration. An FTP Adapter will read the file and another FTP Adapter will write the file. An assign action is configured to assign variables for the file name and file size. A logging message is created to indicate that the file name has been read. The message is logged to the activity stream for viewing. Finally, you also track the integration and monitor message status.
 
-
 The ICS integration that we'll be working with is shown in the following picture:
 
 ![](images/sample/image001.png)
