@@ -51,23 +51,7 @@ Before you can activate and run this sample, you must configure the connection a
     c. Click OK.
 
     
-    
-    
-    Click Configure Security.
-
-        For Security Policy, select FTP Server Access Policy.
-
-        For Username, enter anonymous.
-
-        Enter the same password twice. You can use any password.
-
-        Click OK.
-
-    Click Test to test your configuration. A message is displayed that describes the results of the test. If successful, you are ready to activate the integration.
-
-    Connection Sample FTP connection was tested successfully.
-
-    Click Save, then click Close.
+   
 
 
 
