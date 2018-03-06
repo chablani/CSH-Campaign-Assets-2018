@@ -45,9 +45,9 @@ Before you can activate and run this sample, you must configure the connection a
 **2.2.** Click Sample FTP connection.
 
 **2.3.** Click Configure Connectivity to specify information to connect to the application/endpoint and process requests.
-        * a. For FTP Server Host Address, enter speedtest.tele2.net.
-        * b. For FTP Server Port, enter 21.
-        * c. Click OK.
+         * a. For FTP Server Host Address, enter speedtest.tele2.net.
+         * b. For FTP Server Port, enter 21.
+         * c. Click OK.
 
     
     
