@@ -30,13 +30,49 @@ Let’s start by logging into the Oracle Cloud account and explore the Services 
 
 **1.1.** In the navigation pane, click **Integrations**.
 
-*2. In the row for the File Transfer sample, click the Activate icon, then click Activate when prompted.
-Description of sample_activate.png follows
+**1.2.** In the row for the File Transfer sample, click the **Activate** icon, then click **Activate** when prompted.
+![](images/300/image002.png)
 
-*3. Wait for the icon to turn green, indicating that it is activated.
+**1.3.** Wait for the icon to turn green, indicating that it is activated.
 
 
-### **1.1.1**: Login to your Oracle Cloud account
+# 2: How to Configure
+
+Before you can activate and run this sample, you must configure the connection and security properties of the **Sample FTP connection** FTP Adapter used in this sample.
+
+**2.1.** In the navigation pane, click Integrations, then click Connections.
+
+**2.2.** Click Sample FTP connection.
+
+**2.3.** Click Configure Connectivity to specify information to connect to the application/endpoint and process requests.
+
+         **a.** For FTP Server Host Address, enter speedtest.tele2.net.
+
+        For FTP Server Port, enter 21.
+
+        Click OK.
+
+    Click Configure Security.
+
+        For Security Policy, select FTP Server Access Policy.
+
+        For Username, enter anonymous.
+
+        Enter the same password twice. You can use any password.
+
+        Click OK.
+
+    Click Test to test your configuration. A message is displayed that describes the results of the test. If successful, you are ready to activate the integration.
+
+    Connection Sample FTP connection was tested successfully.
+
+    Click Save, then click Close.
+
+
+
+
+
+
 
 ---
 
